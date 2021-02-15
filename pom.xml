@@ -35,6 +35,13 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>JakartaProject</groupId>
+            <artifactId>mediatek</artifactId>
+            <scope>system</scope>
+            <version>1.0.0</version>
+            <systemPath>${basedir}\src\main\webapp\WEB-INF\lib\mediatek.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>

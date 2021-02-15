@@ -1,4 +1,4 @@
-package com.paydiluv.JakartaProject;
+package com.paydiluv.JakartaProject.service;
 
 import java.io.*;
 import javax.servlet.http.*;
