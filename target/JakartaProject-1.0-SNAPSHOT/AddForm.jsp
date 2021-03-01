@@ -11,7 +11,7 @@
     <title>Choisissez votre service</title>
 </head>
 <body>
-<a href="addDocForm.jsp">Ajouter un Document</a>
-<a href="removeDoc.jsp">Retirer un Document</a>
+<a href="">Ajouter un Document</a>
+<a href="">Retirer un Document</a>
 </body>
 </html>

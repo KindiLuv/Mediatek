@@ -42,8 +42,8 @@ public class MediatekData implements PersistentMediatek {
 	@Override
 	public void newDocument(int type, Object... args) throws NewDocException {
 		// args[0] -> le titre
-		// args [1] --> l'auteur
-		// etc en fonction du type et des infos optionnelles
+		//		// args [1] --> l'auteur
+		//		// etc en fonction du type et des infos optionnelles
 	}
 
 	// supprime un document - exception � d�finir
