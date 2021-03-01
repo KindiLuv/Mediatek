@@ -1,6 +1,7 @@
 package com.paydiluv.JakartaProject.service;
 
 import java.io.*;
+import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
@@ -10,19 +11,14 @@ public class LoginServlet extends HttpServlet {
     public void init() {
     }
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String username = request.getParameter("uname");
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        String username = request.getParameter("titre");
         String password = request.getParameter("pwd");
 
         //verification des donnees
-        // if Madiatek.getUser(username, password);
+        // if Mediatek.getUser(username, password);
 
-        PrintWriter writer = response.getWriter();
-        String htmlRespone = "<html>";
-        htmlRespone += "<h2>Your username is: " + username + "</h2>";
-        htmlRespone += "</html>";
-
-        writer.println(htmlRespone);
+        this.getServletContext().getRequestDispatcher("/AddForm.jsp").forward( request, response);
     }
 
     public void destroy() {

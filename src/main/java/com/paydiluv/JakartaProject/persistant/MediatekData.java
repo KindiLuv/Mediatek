@@ -17,9 +17,14 @@ public class MediatekData implements PersistentMediatek {
 	private MediatekData() {
 	}
 
-	// renvoie la liste de tous les documents de la biblioth�que
+	// renvoie la liste de tous les documents de la biblioth�que par type
 	@Override
 	public List<Document> catalogue(int type) {
+		return null;
+	}
+
+	// renvoie la liste te tous les documents de la bibliotheque
+	public List<Document> catalogue() {
 		return null;
 	}
 
