@@ -11,7 +11,8 @@
     <title>Ajoutez un Document</title>
 </head>
 <body>
-<form method="post" action="">
+<a href="AddForm.jsp">Retour au Menu</a>
+<form method="post" action="add-file-servlet">
     <div class="container">
         <label for="titre">Titre</label>
         <input type="text" placeholder="Entrez le titre du document" name="titre" required>

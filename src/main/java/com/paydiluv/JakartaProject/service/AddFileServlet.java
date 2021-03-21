@@ -1,5 +1,8 @@
 package com.paydiluv.JakartaProject.service;
 
+import mediatek2021.Mediatek;
+import mediatek2021.NewDocException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,15 +12,23 @@ import java.io.IOException;
 
 @WebServlet(name = "addFileServlet", value = "/add-file-servlet")
 public class AddFileServlet extends HttpServlet {
+    private static int fileId = 11;
+    private Mediatek med;
+
     public void init(){}
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
         String title = request.getParameter("uname");
         String author = request.getParameter("auteur");
-        Integer category = Integer.parseInt(request.getParameter("docCat"));
+        int category = Integer.parseInt(request.getParameter("docCat"));
 
         //verification des donnees
-        // if Mediatek.getUser(username, password);
+        try {
+            med.newDocument(category,title,author,fileId);
+            fileId++;
+        } catch (NewDocException e) {
+            e.printStackTrace();
+        }
 
         this.getServletContext().getRequestDispatcher("/AddForm.jsp").forward( request, response);
     }
